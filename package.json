@@ -7,10 +7,13 @@
   "license": "UNLICENSE",
   "scripts": {
     "dist": "webpack --mode=production",
-    "start": "webpack-dev-server --open-page quill.html",
-    "postinstall": "npm run dist"
+    "dev": "webpack-dev-server --open-page quill.html",
+    "postinstall": "npm run dist",
+    "start": "node server.js", 
+    "heroku-postbuild": "webpack -p"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "quill": "^1.3.7",
     "quill-cursors": "^2.2.1",
     "webpack": "^4.44.1",
