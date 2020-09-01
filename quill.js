@@ -24,6 +24,8 @@ window.addEventListener('load', () => {
   buttonHandler(room);
 
   const provider = new WebrtcProvider(room, ydoc);
+  console.log("provider - ",provider);
+  
   const type = ydoc.getText('quill');
 
   const editorContainer = document.createElement('div');
