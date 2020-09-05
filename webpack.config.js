@@ -4,13 +4,13 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: {
-    quill: './quill.js'
+    index: './src/collabory.js'
   },
   output: {
     globalObject: 'self',
     path: path.resolve(__dirname, './dist/'),
-    filename: '[name].bundle.js',
-    publicPath: '/quill/dist/'
+    filename: 'collabory.bundle.js',
+    publicPath: '/index/dist/'
   },
   devServer: {
     contentBase: path.join(__dirname),

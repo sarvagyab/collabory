@@ -7,7 +7,7 @@
   "license": "UNLICENSE",
   "scripts": {
     "dist": "webpack --mode=production",
-    "dev": "webpack-dev-server --open-page quill.html",
+    "dev": "webpack-dev-server --open-page ./src/collabory.html",
     "postinstall": "npm run dist",
     "start": "node server.js",
     "heroku-postbuild": "webpack -p"
