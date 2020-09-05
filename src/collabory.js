@@ -13,7 +13,7 @@ import initializeEditor from './js/editor'
 import roomIdButton from './js/connecting/roomId'
 import roomLinkButton from './js/connecting/roomLink'
 import connectionButton from './js/connecting/connection'
-import exportHandler from './js/docHandling/exportDoc'
+import exportHandler from './js/docHandling/exportFunctions'
 
 
 window.addEventListener('load', () => {
@@ -53,5 +53,8 @@ function buttonHandler(room){
   roomIdButton(room);
   roomLinkButton(room);
   connectionButton(room);
+  console.log("What the hell bitches");
+  // console.log(exportHandler);
   exportHandler();
+  console.log("What the hell bitches 2");
 }
