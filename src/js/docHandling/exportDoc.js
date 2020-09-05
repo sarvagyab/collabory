@@ -2,10 +2,13 @@
 
 import {generatePDF,generateHTML} from './exportFunctions'
 
-const button1 = document.getElementById('export');
-button1.addEventListener('click', () => {
-    showPopupForDifferentExportingOptions();
-});
+
+export default function exportHandler(){
+    const button1 = document.getElementById('export');
+    button1.addEventListener('click', () => {
+        showPopupForDifferentExportingOptions();
+    });
+}
 
 
 function showPopupForDifferentExportingOptions(){

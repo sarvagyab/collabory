@@ -13,7 +13,7 @@ import initializeEditor from './js/editor'
 import roomIdButton from './js/connecting/roomId'
 import roomLinkButton from './js/connecting/roomLink'
 import connectionButton from './js/connecting/connection'
-import * as Export from './js/docHandling/exportDoc'
+import exportHandler from './js/docHandling/exportDoc'
 
 
 window.addEventListener('load', () => {
@@ -21,11 +21,10 @@ window.addEventListener('load', () => {
   const ydoc = new Y.Doc();
 
   const room = window.location.search.substr(1) || ydoc.clientID;
+  buttonHandler(room);
 
   console.log(`connecting to room ${room}`);
   console.log(`sharing link =  ${window.location.host + window.location.pathname + "?" + room}`)
-
-  buttonHandler(room);
 
   const provider = new WebrtcProvider(room, ydoc);
   console.log("provider - ",provider);
@@ -54,4 +53,5 @@ function buttonHandler(room){
   roomIdButton(room);
   roomLinkButton(room);
   connectionButton(room);
+  exportHandler();
 }
