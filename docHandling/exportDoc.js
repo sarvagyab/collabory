@@ -1,6 +1,6 @@
 
 
-import generatePDF from './pdfConverter'
+import {generatePDF,generateHTML} from './exportFunctions'
 
 const button1 = document.getElementById('export');
 button1.addEventListener('click', () => {

@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
   const MODULES = {
     cursors: true,
     toolbar: [
-      [{ font: [] }, { size: [] }],
+      [{ header: [1, 2, false] },{ font: [] }],
       [{ align: [] } ],
       [ 'bold', 'italic', 'underline', 'strike' ],
       [{ color: [] }, { background: [] }],
