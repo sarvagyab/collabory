@@ -1,3 +1,10 @@
 #editor {
-  min-height: 500px;
+  padding: 2cm;
+  margin: 0mm auto 10mm;
+  border: 1px #D3D3D3 solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  height: 210mm;
+  width: 297mm;
 }

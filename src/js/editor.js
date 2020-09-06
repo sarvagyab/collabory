@@ -1,5 +1,5 @@
 
-import Quill from 'quill'
+// import Quill from 'quill'
 import QuillCursors from 'quill-cursors'
 
 Quill.register('modules/cursors', QuillCursors)

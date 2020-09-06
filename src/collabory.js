@@ -12,30 +12,29 @@ import { QuillBinding } from 'y-quill'
 import initializeEditor from './js/editor'
 import roomIdButton from './js/connecting/roomId'
 import roomLinkButton from './js/connecting/roomLink'
-import connectionButton from './js/connecting/connection'
 import exportHandler from './js/docHandling/exportFunctions'
+import importHandler from './js/docHandling/importFunctions'
 
-
-window.addEventListener('load', () => {
+window.onload = () => {
 
   const ydoc = new Y.Doc();
 
   const room = window.location.search.substr(1) || ydoc.clientID;
-  buttonHandler(room);
-
+  
   console.log(`connecting to room ${room}`);
   console.log(`sharing link =  ${window.location.host + window.location.pathname + "?" + room}`)
-
+  
   const provider = new WebrtcProvider(room, ydoc);
   console.log("provider - ",provider);
   
   const type = ydoc.getText('quill');
-
+  
   const editor = initializeEditor();
-
+  
   const binding = new QuillBinding(type, editor, provider.awareness);
-
-
+  
+  buttonHandler(room);
+  
   // Define user name and user name
   // Check the quill-cursors package on how to change the way cursors are rendered
   // provider.awareness.setLocalStateField('user', {
@@ -46,15 +45,12 @@ window.addEventListener('load', () => {
 
   // @ts-ignore
   window.example = { provider, ydoc, type, binding, Y }
-})
+}
 
 
 function buttonHandler(room){
   roomIdButton(room);
   roomLinkButton(room);
-  connectionButton(room);
-  console.log("What the hell bitches");
-  // console.log(exportHandler);
   exportHandler();
-  console.log("What the hell bitches 2");
+  importHandler();
 }

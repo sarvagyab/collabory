@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <title>Yjs Quill Example</title>
-
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    
     <script type="text/javascript" src="../dist/collabory.bundle.js" async></script>
     <link rel=stylesheet href="./styles/quill.css" async defer>
     <link rel=stylesheet href="./styles/button.css" async defer>
@@ -16,12 +17,11 @@
     defer>
 </head>
 <body>
-  <button class="but" type="button" id="y-connect-btn">Disconnect</button>
+  <h1 style="text-align:center; font-style: italic;">Collabory</h1>
   <button class="but" type="button" id="roomID">Copy Room ID</button>
   <button class="but" type="button" id="roomLink">Copy Room Link</button>
   <button class="but" type="button" id="import">Import</button>
-  <!-- <button class="but" type="button" id="export">Export As</button> -->
-
+  <input style="display:none;" type="file" id="file-selector" accept=".html,.txt">
   <div class="dropdown">
     <button class="but" type="button" id="export">Export As</button>
     <div class="dropdown-content">
@@ -31,7 +31,5 @@
   </div> 
 
   <br>
-  <br>
-  <p style="clear:both">This is the alpha version of the app and should not be used in production</p>
-
+  <p style="clear:both"></p>
 </html>
