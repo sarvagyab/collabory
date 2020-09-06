@@ -1,3 +1,5 @@
+import { QuillBinding } from "y-quill";
+
 export default function importHandler() {
     const importer = document.getElementById('import');
     const selector = document.getElementById('file-selector');

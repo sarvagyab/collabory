@@ -5,6 +5,9 @@
 // versioning support
 // authentication based system too
 
+import cssLoader from './js/loadCSS'
+// cssLoader();
+
 import * as Y from 'yjs'
 import { WebrtcProvider } from 'y-webrtc'
 import { QuillBinding } from 'y-quill'
