@@ -1,14 +1,10 @@
 export default function exportHandler(){
-    console.log("Am i  even going here");
     const button1 = document.getElementById('epdf');
     const button2 = document.getElementById('ehtml');
-    console.log('initiating connections here');
     button1.onclick = ()=>{
-        console.log("setting on click");
         generatePDF(document.getElementById('editor').innerHTML);
     };
     button2.onclick = ()=>{
-        console.log("setting on click");
         generateHTML(document.getElementById('editor').innerHTML);
     };
 }
