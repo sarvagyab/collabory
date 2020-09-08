@@ -32,7 +32,7 @@ window.onload = () => {
   const type = ydoc.getText('quill');
   
   const editor = initializeEditor();
-  
+
   const binding = new QuillBinding(type, editor, provider.awareness);
   
   buttonHandler(room);

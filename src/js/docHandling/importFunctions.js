@@ -1,4 +1,5 @@
 import { QuillBinding } from "y-quill";
+import {EDITOR} from '../editor';
 
 export default function importHandler() {
     const importer = document.getElementById('import');
@@ -34,11 +35,12 @@ export default function importHandler() {
 
 
 function takeAptAction(type,content){
-    const editor = document.getElementById('editor');
+    // const editor = document.getElementById('editor');
+    EDITOR.setContents([]);
     if(type == 'text/html'){
-        editor.innerHTML = content;
+        EDITOR.clipboard.dangerouslyPasteHTML(0, content);
     }
     else{
-        editor.innerText = content;
+        EDITOR.setText(content);
     }
 }

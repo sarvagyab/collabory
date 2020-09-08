@@ -4,6 +4,8 @@ import QuillCursors from 'quill-cursors'
 
 Quill.register('modules/cursors', QuillCursors)
 
+export let EDITOR = null;
+
 const MODULES = {
     cursors: true,
     toolbar: [
@@ -32,7 +34,7 @@ export default function initializeEditor() {
     const editorContainer = document.createElement('div');
     editorContainer.setAttribute('id', 'editor');
     document.body.insertBefore(editorContainer, null);
-
     const editor = new Quill(editorContainer, editorSettings);
+    EDITOR = editor;
     return editor;
 }

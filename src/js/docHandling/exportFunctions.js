@@ -1,11 +1,13 @@
+import {EDTIOR, EDITOR} from '../editor'
+
 export default function exportHandler(){
     const button1 = document.getElementById('epdf');
     const button2 = document.getElementById('ehtml');
     button1.onclick = ()=>{
-        generatePDF(document.getElementById('editor').innerHTML);
+        generatePDF(EDITOR.root.innerHTML);
     };
     button2.onclick = ()=>{
-        generateHTML(document.getElementById('editor').innerHTML);
+        generateHTML(EDITOR.root.innerHTML);
     };
 }
 
