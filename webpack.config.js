@@ -8,13 +8,13 @@ module.exports = {
   },
   output: {
     globalObject: 'self',
-    path: path.resolve(__dirname, './dist/'),
+    path: path.resolve(__dirname, './src/'),
     filename: 'collabory.bundle.js',
-    publicPath: '/index/dist/'
+    publicPath: '/index/src/'
   },
   devServer: {
     contentBase: path.join(__dirname),
     compress: true,
-    publicPath: '/dist/'
+    publicPath: '/src/'
   },
 }
