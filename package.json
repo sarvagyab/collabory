@@ -7,10 +7,11 @@
   "license": "UNLICENSE",
   "scripts": {
     "dist": "webpack --mode=production",
-    "dev": "webpack-dev-server --open-page ./src/collabory.html",
+    "dev": "webpack-dev-server --open-page ./src/index.html",
     "postinstall": "npm run dist",
     "start": "node server.js",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack -p",
+    "build": "webpack -p"
   },
   "dependencies": {
     "express": "^4.17.1",
